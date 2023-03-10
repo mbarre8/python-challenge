@@ -34,17 +34,15 @@ with open(budget_data_path) as csvfile:
         Date_list.append(row["Date"]) 
         #and turn all data in second column called Profit/Losses of CSV file into a list
         Profit_loss_list.append(int(row["Profit/Losses"]))
-        
-     
+
 for i in range(len(Profit_loss_list)-1):
         Monthly_change.append(Profit_loss_list[i+1]-Profit_loss_list[i])
         Average_changes = mean(Monthly_change)
         Date_change= [Date_change] + [row["Date"]]
         
-        greatest_decrease = min(Monthly_change)
-        
-     
-        greatest_increase = max(Monthly_change)
+greatest_decrease = min(Monthly_change)
+            
+greatest_increase = max(Monthly_change)
      
  
 print(f'Financial Analysis')
