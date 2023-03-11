@@ -30,11 +30,16 @@ with open(election_data_path) as csvfile:
         
         percentage_vote= (total_votes_cand/len(Total_votes)) *100
         Vote_percentage.append(percentage_vote)
+    
+    Winner= Cand_total_votes.index(max(Cand_total_votes))
+
         
     print(f'Election Results')
     print('------------------------------------')
     print (f'Total Votes: {len(Total_votes)}')
     print('------------------------------------')
-    print(f'{Candidates_rec_votes[0]}: {round(Vote_percentage[0],2)}%, ({Cand_total_votes[0]})')
-    print(f'{Candidates_rec_votes[2]}: {round(Vote_percentage[2],2)}%, ({Cand_total_votes[2]})')
-    print(f'{Candidates_rec_votes[1]}: {round(Vote_percentage[1],2)}%, ({Cand_total_votes[1]})')
+    print(f'{Candidates_rec_votes[0]}: {round(Vote_percentage[0],2)}% ({Cand_total_votes[0]})')
+    print(f'{Candidates_rec_votes[2]}: {round(Vote_percentage[2],2)}% ({Cand_total_votes[2]})')
+    print(f'{Candidates_rec_votes[1]}: {round(Vote_percentage[1],2)}% ({Cand_total_votes[1]})')
+    print('------------------------------------')
+    print(f'The Winner is: {(Candidates_rec_votes[Winner])}')
