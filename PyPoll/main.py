@@ -52,8 +52,8 @@ with open(election_data_path) as csvfile:
     print('------------------------------------')
     #print Canadidate name, vote percentage, total votes, for each candidate
     print(f'{Candidates_rec_votes[0]}: {round(Vote_percentage[0],2)}% ({Cand_total_votes[0]})')
-    print(f'{Candidates_rec_votes[2]}: {round(Vote_percentage[2],2)}% ({Cand_total_votes[2]})')
     print(f'{Candidates_rec_votes[1]}: {round(Vote_percentage[1],2)}% ({Cand_total_votes[1]})')
+    print(f'{Candidates_rec_votes[2]}: {round(Vote_percentage[2],2)}% ({Cand_total_votes[2]})')
     print('------------------------------------')
     #print winner name using index max(most popular votes) to find name
     print(f'The Winner is: {(Candidates_rec_votes[Winner])}')
@@ -62,14 +62,11 @@ with open(election_data_path) as csvfile:
 with open("analysis/PyPoll_Analysis.txt", 'w')as text:
     text.write('Election Results\n')
     text.write('-----------------------------------\n')
-    #print total votes
     text.write('Total Votes: ' + str(len(Total_votes)) +'\n')
     text.write('------------------------------------\n')
-    #print Canadidate name, vote percentage, total votes, for each candidate
     text.write(str(Candidates_rec_votes[0]) + ': ' + str(round(Vote_percentage[0],2)) + '% (' + str(Cand_total_votes[0]) + ')\n')
     text.write(str(Candidates_rec_votes[1]) + ': ' + str(round(Vote_percentage[1],2)) + '% (' + str(Cand_total_votes[1]) + ')\n')
     text.write(str(Candidates_rec_votes[2]) + ': ' + str(round(Vote_percentage[2],2)) + '% (' + str(Cand_total_votes[2]) + ')\n')
     text.write('------------------------------------\n')
-    #print winner name using index max(most popular votes) to find name
     text.write('The Winner is: ' + str(Candidates_rec_votes[Winner])+ '\n')
     text.write('------------------------------------')
