@@ -40,7 +40,7 @@ with open(election_data_path) as csvfile:
         #list of calculated percentage of votes each candidate 
         percentage_vote= (total_votes_cand/len(Total_votes)) *100
         Vote_percentage.append(percentage_vote)
-
+        break
     #locate index of max value for popular votes to correlate candidate name with most popular votes
     Winner= Cand_total_votes.index(max(Cand_total_votes))
 
@@ -51,9 +51,9 @@ print('-----------------------------------')
 print (f'Total Votes: {len(Total_votes)}')
 print('------------------------------------')
 #print Canadidate name, vote percentage, total votes, for each candidate
-print(f'{Candidates_rec_votes[0]}: {round(Vote_percentage[0],2)}% ({Cand_total_votes[0]})')
-print(f'{Candidates_rec_votes[2]}: {round(Vote_percentage[2],2)}% ({Cand_total_votes[2]})')
-print(f'{Candidates_rec_votes[1]}: {round(Vote_percentage[1],2)}% ({Cand_total_votes[1]})')
+print(f'{Candidates_rec_votes[0]}: {round(Vote_percentage[0],2)}%, ({Cand_total_votes[0]})')
+print(f'{Candidates_rec_votes[2]}: {round(Vote_percentage[2],2)}%, ({Cand_total_votes[2]})')
+print(f'{Candidates_rec_votes[1]}: {round(Vote_percentage[1],2)}%, ({Cand_total_votes[1]})')
 print('------------------------------------')
 #print winner name using index max(most popular votes) to find name
 print(f'The Winner is: {(Candidates_rec_votes[Winner])}')
