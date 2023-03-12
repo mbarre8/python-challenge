@@ -67,8 +67,8 @@ with open("analysis/PyPoll_Analysis.txt", 'w')as text:
     text.write('------------------------------------\n')
     #print Canadidate name, vote percentage, total votes, for each candidate
     text.write(str(Candidates_rec_votes[0]) + ': ' + str(round(Vote_percentage[0],2)) + '% (' + str(Cand_total_votes[0]) + ')\n')
-    text.write(str(Candidates_rec_votes[2]) + ': ' + str(round(Vote_percentage[2],2)) + '% (' + str(Cand_total_votes[2]) + ')\n')
     text.write(str(Candidates_rec_votes[1]) + ': ' + str(round(Vote_percentage[1],2)) + '% (' + str(Cand_total_votes[1]) + ')\n')
+    text.write(str(Candidates_rec_votes[2]) + ': ' + str(round(Vote_percentage[2],2)) + '% (' + str(Cand_total_votes[2]) + ')\n')
     text.write('------------------------------------\n')
     #print winner name using index max(most popular votes) to find name
     text.write('The Winner is: ' + str(Candidates_rec_votes[Winner])+ '\n')
