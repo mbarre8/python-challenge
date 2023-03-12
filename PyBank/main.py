@@ -67,9 +67,9 @@ with open("analysis/PyBank_Analysis.txt", 'w')as text:
                             
         text.write('Financial Analysis\n')
         text.write('------------------------------------\n')
-        text.write('Total Months:' + str(len(Date_list)) + '\n')
+        text.write('Total Months: ' + str(len(Date_list)) + '\n')
         text.write('Total: $' + str(sum(Profit_loss_list)) + '\n')
         text.write('Average Change: $' + str(round(Average_changes,2)) + '\n')
-        text.write('Greatest Decrease in Profits: ' + str(Date_list[greatest_decrease_date]) + ' $' + str(greatest_decrease) +'\n')
-        text.write('Greatest Increase in Profits: ' + str(Date_list[greatest_increase_date]) + ' $' +str(greatest_increase) + '\n')
+        text.write('Greatest Decrease in Profits: ' + str(Date_list[greatest_decrease_date]) + ' ($' + str(greatest_decrease) +')\n')
+        text.write('Greatest Increase in Profits: ' + str(Date_list[greatest_increase_date]) + ' ($' +str(greatest_increase) + ')\n')
         
