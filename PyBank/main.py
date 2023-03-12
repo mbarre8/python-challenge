@@ -59,9 +59,9 @@ print(f'Total: ${(sum(Profit_loss_list))}')
 #print average change and round value to 2 decimal spots
 print(f'Average Change: ${round(Average_changes,2)}')
 #Print date and value of greatest decrease in profit. locate date by using index value of greatest decrease profit amount and find corresponding date
-print(f'Greatest Decrease in Profits: {(Date_list[greatest_decrease_date])} ${greatest_decrease}')
+print(f'Greatest Decrease in Profits: {(Date_list[greatest_decrease_date])} (${greatest_decrease})')
 #Print date and value of greatest increase in profit. locate date by using index value of greatest increase profit amount and find corresponding date
-print(f'Greatest Increase in Profits: {(Date_list[greatest_increase_date])} ${greatest_increase}')
+print(f'Greatest Increase in Profits: {(Date_list[greatest_increase_date])} (${greatest_increase})')
 
 with open("analysis/PyBank_Analysis.txt", 'w')as text:
                             
