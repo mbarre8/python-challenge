@@ -32,15 +32,18 @@ with open(election_data_path) as csvfile:
     for i in set(Candidates_list):
         #list of names of all candidates that received votes
         Candidates_rec_votes.append(i)
+        Candidates_rec_votes.index
         
         #list that counts how many votes each unique candidate received
         total_votes_cand=Candidates_list.count(i)
         Cand_total_votes.append(total_votes_cand)
-        
+        Cand_total_votes.index
+
         #list of calculated percentage of votes each candidate 
         percentage_vote= (total_votes_cand/len(Total_votes)) *100
         Vote_percentage.append(percentage_vote)
-        break
+        Vote_percentage.index
+        
     #locate index of max value for popular votes to correlate candidate name with most popular votes
     Winner= Cand_total_votes.index(max(Cand_total_votes))
 
